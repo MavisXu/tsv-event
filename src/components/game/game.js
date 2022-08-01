@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { plots1 } from '../../data/plots1';
 import Choice from '../choice/choice';
@@ -7,8 +7,15 @@ export default function Game() {
     const { characterId } = useLocation().state;
     const [ plotId, setPlotId ] = useState(0);
     const [ plots, setPlots ] = useState(plots1);
+    const [ text, setText] = useState('');
 
-    function changePlot(to) {
+    useEffect(() => {
+        console.log('plotId', plotId);
+        setText(text + ' ' + plots[plotId].text);
+    }, [plotId]);
+
+    function changePlot(reponseText, to) {
+        setText(reponseText);
         setPlotId(to);
     }
 
@@ -16,30 +23,20 @@ export default function Game() {
         setPlotId(0);
     }
 
-    function showChoices(data) {
-        if (data.options) {
-            let choices = data.options.map((data) => {
-                return (
+    return (
+        <div>
+            <div>
+                <h3>{text}</h3>
+            </div>
+            <div>
+                {plots[plotId].options.map((option) => (
                     <Choice
-                    key={data.id}
-                    details={data}
-                    changePlot={changePlot}
+                        key={option.id}
+                        details={option}
+                        changePlot={changePlot}
                     />
-                )
-            })
-        } else if (data.ending) {
-            return (
-                <div>Ending</div>
-            )
-        }
-    } 
-
-
-
-
-
-    // return (
-            // <div><h3>{plots[plotId].text}</h3></div>
-            // <div>{showChoices(plots[plotId].options)}</div></>
-    // )
+                ))}
+            </div>
+        </div>
+    )
 }

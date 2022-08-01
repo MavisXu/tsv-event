@@ -1,0 +1,31 @@
+.selection-body {
+    margin: 2rem 4rem;
+    text-align: center;
+}
+
+.photo {
+    height: 200px;
+    margin: 2rem;
+}
+
+/* .character {
+    display: flex;
+    justify-content: space-around;
+} */
+
+.character {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .details {
+    margin: 2rem 0 0 0;
+} */
+
+.details {
+    margin: 0;
+}
+
+.detail {
+    line-height: 0rem;
+}

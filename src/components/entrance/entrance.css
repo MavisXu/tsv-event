@@ -1,0 +1,30 @@
+  /* .Entrance {
+    text-align: center;
+    margin: 12rem;
+  } */
+
+  .Entrance {
+    text-align: center;
+    margin: 2rem;
+  }
+  
+  .Sub-header {
+    color: grey;
+    text-align: left;
+  }
+  
+  .Body-text {
+    font-size: 1.17rem;
+    text-align: justify;
+  }
+  
+  .Game-start {
+    background-color: #00BFFF;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }

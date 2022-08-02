@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { plots1, plots2, plots3, plots4, plots5, plots6 } from '../../data/';
 import Choice from '../choice/choice';
+import Ending from '../ending/ending';
 import './game.css'
 
 export default function Game() {
@@ -10,19 +11,17 @@ export default function Game() {
     const [ plots, setPlots ] = useState(choosePlots(characterId));
     const [ text, setText] = useState('');
 
+
     useEffect(() => {
         console.log('plotId', plotId);
         let optionText = text ? text: '';
-        setText(optionText + ' ' + plots[plotId].text);
+        let plotText = plots[plotId].text ? plots[plotId].text : '';
+        setText(optionText + ' ' + plotText);
     }, [plotId]);
 
     function changePlot(reponseText, to) {
         setText(reponseText);
         setPlotId(to);
-    }
-
-    function resetGame() {
-        setPlotId(0);
     }
 
     function choosePlots(characterId) {
@@ -54,6 +53,13 @@ export default function Game() {
                 )
             })
             return choices;
+        } else if (data && data.ending) {
+            return (
+                <Ending
+                    key={data.ending.id}
+                    ending={data.ending.text}
+                />
+            )
         }
     }
 

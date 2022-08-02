@@ -1,9 +1,4 @@
-import character1 from '../assets/game-1.jpg';
-import character2 from '../assets/game-2.jpg';
-import character3 from '../assets/game-3.jpg';
-import character4 from '../assets/game-4.jpg';
-import character5 from '../assets/game-5.jpg';
-import character6 from '../assets/game-6.jpg';
+import { Character1, Character2, Character3, Character4, Character5, Character6 } from '../assets/';
 
 export const characters = [
     {
@@ -14,7 +9,7 @@ export const characters = [
         education: '小学',
         maritalStatus: '离异',
         career: '无业',
-        profile: character1
+        profile: Character1
     },
     {
         id: 2,
@@ -24,7 +19,7 @@ export const characters = [
         education: '本科',
         maritalStatus: '未婚',
         career: '在校学生',
-        profile: character2
+        profile: Character2
     },
     {
         id: 3, 
@@ -34,7 +29,7 @@ export const characters = [
         education: '本科',
         maritalStatus: '未婚',
         career: '在校学生',
-        profile: character3
+        profile: Character3
     },
     {
         id: 4,
@@ -44,7 +39,7 @@ export const characters = [
         education: '初中',
         maritalStatus: '不明',
         career: '无业',
-        profile: character4
+        profile: Character4
     },
     {
         id: 5,
@@ -54,7 +49,7 @@ export const characters = [
         education: '本科',
         maritalStatus: '不明',
         career: '民企员工',
-        profile: character5
+        profile: Character5
     },
     { 
         id: 6,
@@ -64,6 +59,6 @@ export const characters = [
         education: '中专',
         maritalStatus: '已婚',
         career: '餐馆老板',
-        profile: character6
+        profile: Character6
     },
 ];

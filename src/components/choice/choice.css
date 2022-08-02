@@ -1,0 +1,10 @@
+.choice {
+    margin-bottom: 1rem;
+}
+
+.button {
+    background-color: white;
+    color: black;
+    font-size: 1.17rem;
+    border: 0.1rem solid #e7e7e7;
+}

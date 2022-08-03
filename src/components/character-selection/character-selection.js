@@ -6,7 +6,7 @@ export default function CharacterSelection() {
     let navigate = useNavigate();
     const routeChange = (character) => {
       let path = '/game';
-      let state = {state: {characterId: character.id}}
+      let state = {state: {characterId: character.id, attributes: character.attributes}}
       navigate(path, state);
     };
 

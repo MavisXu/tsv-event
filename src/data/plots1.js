@@ -8,21 +8,24 @@ export const plots1 = [
             { 
                 id: 0.0,
                 label: '烦躁',
-                text: '接起：喂?！',
-                to: 1
+                text: '接起：喂?!',
+                to: 1,
+                attributes: {}
             },
             { 
                 id: 0.1,
                 label: '十分烦躁',
                 text: '接起：谁他妈叫魂呢?!',
-                to: 1
+                to: 1,
+                attributes: {}
             },
             { 
                 id: 0.2,
                 label: '特别烦躁',
                 text: '把电话摁了。\
                       又来了一个电话，呼叫人“大哥”，接起电话。',
-                to: 2
+                to: 2,
+                attributes: {}
             }
         ]
     },
@@ -37,13 +40,18 @@ export const plots1 = [
                 id: 1.0,
                 label: '烦躁',
                 text: '呵斥妻子：你他吗没长手是吧？进来不会关阳台门？！我的钱是天上下的？没看到里面开了空调？他吗的钱不会赚就知道浪费！',
-                to: 2
+                to: 2,
+                attributes: {}
             },
             { 
                 id: 1.1,
                 label: '十分烦躁',
                 text: '从手边抡起一个空酒瓶向妻子脚下扔去，呵斥妻子：你他吗没长手是吧？进来不会关阳台门？！我的钱是天上下的？没看到里面开了空调？他吗的钱不会赚就知道浪费！',
-                to: 2
+                to: 2,
+                attributes: {
+                    mood: -1,
+                    violence: 1
+                }
             }
         ]
     },
@@ -61,13 +69,15 @@ export const plots1 = [
                 id: 2.0,
                 label: '嗤之以鼻',
                 text: '“大哥，女人惯不得的。你给点好脸色她就能爬到你头上作威作福。你得打哇。”',
-                to: 3
+                to: 3,
+                attributes: {}
             },
             { 
                 id: 2.1,
                 label: '不以为然',
                 text: '“大哥，你那是嫂子懂事儿。要我说，女人就是贱骨头，越打骂越听话，日子才能过得舒服。”',
-                to: 3
+                to: 3,
+                attributes: {}
             }
         ]
     },
@@ -83,14 +93,21 @@ export const plots1 = [
                 id: 3.0,
                 label: '选什么衣服，这不是穿着呢吗？',
                 text: '你坐了起来，让妻子拿了点饭菜，一边吃一边刷短视频。',
-                to: 4
+                to: 4,
+                attributes: {
+                    appearance: 1,
+                    mood: 1
+                }
             },
             { 
                 id: 3.1,
                 label: '忽然想洗澡。',
                 text: '你让妻子给拿一套衣服，洗完澡换上了。妻子内心：“……怎么今天竟然还洗澡了……难得一见……” \
                         换完衣服，让妻子拿了点饭菜，你一边吃一边刷短视频。',
-                to: 4
+                to: 4,
+                attributes: {
+                    appearance: 1
+                }
             }
         ]
     },
@@ -105,17 +122,26 @@ export const plots1 = [
             { 
                 id: 4.0,
                 label: '“男人不坏，女人不爱”',
-                to: 5
+                to: 5,
+                attributes: {
+                    mood: 1
+                }
             },
             { 
                 id: 4.1,
                 label: '"我办事十拿九稳，唯独少你一吻"', 
-                to: 5
+                to: 5,
+                attributes: {
+                    mood: 1
+                }
             },
             { 
                 id: 4.2,
                 label: '"连我都不赞，那你赞什么，赞助商吗？"', 
-                to: 5
+                to: 5,
+                attributes: {
+                    mood: 1
+                }
             }
         ]
     },
@@ -130,19 +156,22 @@ export const plots1 = [
                 id: 5.0,
                 label: '不耐烦',
                 text: '“三棍子打不出一个屁，没事儿别在这儿碍眼。”',
-                to: 6
+                to: 6,
+                attributes: {}
             },
             { 
                 id: 5.1,
                 label: '等待她说话', 
                 text: '（继续刷短视频）',
-                to: 6
+                to: 6,
+                attributes: {}
             },
             { 
                 id: 5.2,
                 label: '问她', 
                 text: '“有话要说？想要钱？听到我跟大哥打电话了？知道又要有钱了是吧？”',
-                to: 6
+                to: 6,
+                attributes: {}
             }
         ]
     },

@@ -6,7 +6,7 @@ import Ending from '../ending/ending';
 import './game.css'
 
 export default function Game() {
-    const { characterId } = useLocation().state;
+    const { characterId, attributes } = useLocation().state;
     const [ plotId, setPlotId ] = useState(0);
     const [ plots, setPlots ] = useState(choosePlots(characterId));
     const [ text, setText] = useState('');
@@ -14,6 +14,7 @@ export default function Game() {
 
     useEffect(() => {
         console.log('plotId', plotId);
+        console.log('attributes', attributes);
         let optionText = text ? text: '';
         let plotText = plots[plotId].text ? plots[plotId].text : '';
         setText(optionText + ' ' + plotText);

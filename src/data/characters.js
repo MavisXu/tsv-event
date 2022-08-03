@@ -9,7 +9,17 @@ export const characters = [
         education: '小学',
         maritalStatus: '离异',
         career: '无业',
-        profile: Character1
+        profile: Character1,
+        attributes: {
+            moral: 6,
+            violence: 4,
+            strength: 7,
+            mood: 7,
+            money: 10,
+            courage: 6,
+            life: 10,
+            appearance: 6
+        }
     },
     {
         id: 2,
@@ -19,7 +29,17 @@ export const characters = [
         education: '本科',
         maritalStatus: '未婚',
         career: '在校学生',
-        profile: Character2
+        profile: Character2,
+        attributes: {
+            moral: 6,
+            violence: 3,
+            strength: 5,
+            mood: 7,
+            money: 10,
+            courage: 6,
+            life: 10,
+            appearance: 7
+        }
     },
     {
         id: 3, 
@@ -29,7 +49,17 @@ export const characters = [
         education: '本科',
         maritalStatus: '未婚',
         career: '在校学生',
-        profile: Character3
+        profile: Character3,
+        attributes: {
+            moral: 6,
+            violence: 3,
+            strength: 5,
+            mood: 7,
+            money: 10,
+            courage: 6,
+            life: 10,
+            appearance: 7
+        }
     },
     {
         id: 4,
@@ -39,7 +69,17 @@ export const characters = [
         education: '初中',
         maritalStatus: '不明',
         career: '无业',
-        profile: Character4
+        profile: Character4,
+        attributes: {
+            moral: 6,
+            violence: 4,
+            strength: 7,
+            mood: 7,
+            money: 10,
+            courage: 6,
+            life: 10,
+            appearance: 6
+        }
     },
     {
         id: 5,
@@ -49,7 +89,17 @@ export const characters = [
         education: '本科',
         maritalStatus: '不明',
         career: '民企员工',
-        profile: Character5
+        profile: Character5,
+        attributes: {
+            moral: 6,
+            violence: 3,
+            strength: 5,
+            mood: 7,
+            money: 10,
+            courage: 6,
+            life: 10,
+            appearance: 7
+        }
     },
     { 
         id: 6,
@@ -59,6 +109,16 @@ export const characters = [
         education: '中专',
         maritalStatus: '已婚',
         career: '餐馆老板',
-        profile: Character6
+        profile: Character6,
+        attributes: {
+            moral: 6,
+            violence: 4,
+            strength: 7,
+            mood: 7,
+            money: 10,
+            courage: 6,
+            life: 10,
+            appearance: 6
+        }
     },
 ];

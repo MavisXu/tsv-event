@@ -20,9 +20,12 @@ export default function Game() {
         setText(optionText + ' ' + plotText);
     }, [plotId]);
 
-    function changePlot(reponseText, to) {
+    function changePlot(reponseText, to, attributesChange) {
         setText(reponseText);
         setPlotId(to);
+        Object.entries(attributesChange).forEach(([key, value]) => {
+            attributes[key] += value;
+        });
     }
 
     function choosePlots(characterId) {

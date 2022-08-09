@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { plots1, plots2, plots3, plots4, plots5, plots6 } from '../../data/';
+import { plots1, plots2, plots3, plots4, plots5 } from '../../data/';
 import Choice from '../choice/choice';
 import Ending from '../ending/ending';
 import './game.css'
@@ -40,8 +40,6 @@ export default function Game() {
                 return plots4;
             case 5:
                 return plots5;
-            case 6:
-                return plots6;
         }
     }
 

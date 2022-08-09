@@ -3,7 +3,6 @@ import Character2 from './character/character-2.jpg';
 import Character3 from './character/character-3.jpg';
 import Character4 from './character/character-4.jpg';
 import Character5 from './character/character-5.jpg';
-import Character6 from './character/character-6.jpg';
 import Ending1 from './ending/ending-1.jpg';
 import Ending2 from './ending/ending-2.jpg';
 import Ending3 from './ending/ending-3.jpg';
@@ -17,7 +16,6 @@ export {
     Character3,
     Character4,
     Character5,
-    Character6,
     Ending1,
     Ending2,
     Ending3,

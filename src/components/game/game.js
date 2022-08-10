@@ -16,9 +16,14 @@ export default function Game() {
         console.log('plotId', plotId);
         console.log('attributes', attributes);
         let optionText = text ? text: '';
-        let plotText = plots[plotId].text ? plots[plotId].text : '';
+        let plot = getPlots(plotId);
+        let plotText = plot.text ? plot.text : '';
         setText(optionText + ' ' + plotText);
     }, [plotId]);
+
+    function getPlots(plotId) {
+        return plots.filter(plot => plot.id === plotId)[0];
+    }
 
     function changePlot(reponseText, to, attributesChange) {
         setText(reponseText);
@@ -71,7 +76,7 @@ export default function Game() {
                 <h3>{text}</h3>
             </div>
             <div>
-                {showChoices(plots[plotId])}
+                {showChoices(getPlots(plotId))}
             </div>
         </div>
     )

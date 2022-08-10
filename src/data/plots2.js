@@ -671,21 +671,11 @@ export const plots2 = [
         options: [
             { 
                 id: 26.0,
-                label: '不推开',
-                text: '',
-                to: 28,
-                attributesChange: {
-                    mood: -1,
-                    courage: -1
-                }
-            },
-            { 
-                id: 26.1,
                 label: '推开”干啥啊你，有病吧你',
-                text: '',
+                text: '批评对方：你有病吧？你走开！',
                 to: 28,
                 attributesChange: {
-                    mood: -1
+                    mood: -2
                 }
             }
         ]
@@ -698,30 +688,11 @@ export const plots2 = [
         options: [
             { 
                 id: 27.0,
-                label: '不推开',
-                text: '',
-                to: 28,
-                attributesChange: {
-                    mood: -1,
-                    courage: -1
-                }
-            },
-            { 
-                id: 27.1,
-                label: '推开”干啥啊你，有病吧你',
-                text: '',
-                to: 28,
-                attributesChange: {
-                    mood: -1
-                }
-            },
-            { 
-                id: 27.2,
                 label: '帮助朋友，批评对方：你有病吧？你走开！',
-                text: '',
-                to: 28,
+                text: '批评对方：走开！别过来！',
+                to: 37,
                 attributesChange: {
-                    mood: -1,
+                    mood: -2,
                     courage: 1
                 }
             }
@@ -729,59 +700,30 @@ export const plots2 = [
     },
     {
         id: 28,
-        text: '对方并没有要走开的意思。这时候你',
+        text: 'x再次伸手摸背: “怎么了，摸一下怎么了？装什么呀”',
         time: '24:00',
         location: '烧烤店',
         options: [
             { 
-                id: 28.0,
-                label: '不批评对方',
-                text: '',
-                to: 29,
-                attributesChange: {
-                    mood: -1,
-                    courage: -1
-                }
-            },
-            { 
                 id: 28.1,
-                label: '批评对方：你有病吧？你走开！',
+                label: '回应：你有毛病吧? 推开对方',
                 text: '',
                 to: 29,
                 attributesChange: {
                     mood: -1
-                }
-            },
-            { 
-                id: 28.2,
-                label: '批评对方：走开！别过来！！',
-                text: '',
-                to: 29,
-                attributesChange: {
-                    mood: -1,
                 }
             }
         ]
     },
     {
         id: 29,
-        text: 'x再次伸手摸背: “怎么了，摸一下怎么了？装什么呀”',
+        text: 'x再次伸手摸背:“哎哟什么臭婊子啊,摸你是看得起你,装什么装啊。来你请哥哥喝酒这事儿就算了！”',
         time: '24:00',
         location: '烧烤店',
         options: [
             { 
                 id: 29.0,
-                label: '不推开',
-                text: '',
-                to: 30,
-                attributesChange: {
-                    mood: -1,
-                    courage: -1
-                }
-            },
-            { 
-                id: 29.1,
-                label: '回应：你有毛病吧? 推开对方',
+                label: '回应：起开！推开对方',
                 text: '',
                 to: 30,
                 attributesChange: {
@@ -792,59 +734,32 @@ export const plots2 = [
     },
     {
         id: 30,
-        text: 'x再次伸手摸背:“哎哟什么臭婊子啊,摸你是看得起你,装什么装啊。来你请哥哥喝酒这事儿就算了！”',
+        text: 'x再次伸手摸背:“哎哟我操你妈的，给脸不要脸啊？我操你妈的，你还敢不让？你再推试试看？”',
         time: '24:00',
         location: '烧烤店',
         options: [
             { 
                 id: 30.0,
-                label: '不推开',
+                label: '回应：推开对方，拒绝被摸',
                 text: '',
                 to: 31,
                 attributesChange: {
                     mood: -1,
-                    courage: -1
-                }
-            },
-            { 
-                id: 30.1,
-                label: '回应：起开！推开对方',
-                text: '',
-                to: 31,
-                attributesChange: {
-                    mood: -1
                 }
             }
         ]
     },
     {
         id: 31,
-        text: 'x再次伸手摸背:“哎哟我操你妈的，给脸不要脸啊？我操你妈的，你还敢不让？你再推试试看？”',
-        time: '24:00',
-        location: '烧烤店',
-        options: [
-            { 
-                id: 31.0,
-                label: '回应：推开对方，拒绝被摸',
-                text: '',
-                to: 32,
-                attributesChange: {
-                    mood: -1,
-                }
-            }
-        ]
-    },
-    {
-        id: 32,
         text: 'x扇女性的脸',
         time: '24:00',
         location: '烧烤店',
         options: [
             { 
-                id: 32.0,
+                id: 31.0,
                 label: '回应：站起来打回去',
                 text: '',
-                to: 33,
+                to: 32,
                 attributesChange: {
                     life: -1,
                     mood: -1,
@@ -855,31 +770,31 @@ export const plots2 = [
         ]
     },
     {
-        id: 33,
+        id: 32,
         text: 'x把女性按回椅子打。甲离开座位拉x,x踢甲;甲倒向别的桌子;',
         time: '24:00',
         location: '烧烤店',
         options: [
             { 
-                id: 33.0,
+                id: 32.0,
                 label: '回应：再次站起来回击。',
                 text: '',
-                to: 34,
+                to: 33,
                 attributesChange: {}
             }
         ]
     },
     {
-        id: 34,
+        id: 33,
         text: 'x揪住甲殴打;男子y冲进来, 举起椅子砸向甲,接着殴打乙;男子z冲进店中,对我拳打脚踢x“真他妈给脸不要脸,臭婊子,以为自己是谁?还敢耍性子”y”我操真他妈的贱货“ ',
         time: '24:00',
         location: '烧烤店',
         options: [
             { 
-                id: 34.0,
+                id: 33.0,
                 label: '继续',
                 text: '',
-                to: 35,
+                to: 34,
                 attributesChange: {
                     life: -2,
                     mood: -1,
@@ -889,5 +804,213 @@ export const plots2 = [
                 }
             }
         ]
+    },
+    {
+        id: 34,
+        text: 'x揪住我殴打, x将我拖出店门外。X握着碎酒瓶痛击我的头;我感觉很痛，我有很多伤口，我出血了；',
+        time: '24:00',
+        location: '烧烤店',
+        options: [
+            { 
+                id: 34.0,
+                label: '继续',
+                text: '',
+                to: 35,
+                attributesChange: {
+                    life: -3
+                }
+            }
+        ]
+    },
+    {
+        id: 35,
+        text: 'x放开了我, 我看到乙被x抡向地上, 我听到咚的一声。X擦了擦手, 他手上是红色的血。我站起来。X揪住我的头发拖拽我, 我力不能支。我倒地，蜷住身体；',
+        time: '24:00',
+        location: '烧烤店',
+        options: [
+            { 
+                id: 35.0,
+                label: '继续',
+                text: '旁人劝架、被x殴打;警笛声响起,x、y、z立刻抽身,在警察到达之前跑了。',
+                to: 36,
+                attributesChange: {
+                    life: -1,
+                    mood: -1
+                }
+            }
+        ]
+    },
+    {
+        id: 36,
+        ending: {
+            id: 36.0,
+            label: '游戏结束',
+            text: '结局1: 被骚扰; 大量出血；面部头部受伤；'
+        }
+    },
+    {
+        id: 37,
+        text: 'x反复伸手骚扰朋友,朋友不堪其扰，不停推拒。',
+        time: '24:00',
+        location: '烧烤店',
+        options: [
+            { 
+                id: 37.0,
+                label: '继续',
+                text: '',
+                to: 38,
+                attributesChange: {}
+            }
+        ]
+    },
+    {
+        id: 38,
+        text: 'X:“怎么了，摸一下怎么了？装什么呀”',
+        time: '24:00',
+        location: '烧烤店',
+        options: [
+            { 
+                id: 38.0,
+                label: '继续',
+                text: '',
+                to: 39,
+                attributesChange: {}
+            }
+        ]
+    },
+    {
+        id: 39,
+        text: 'X:“摸你是看得起你，装什么装啊。来你请哥哥喝酒这事儿就算了！”',
+        time: '24:00',
+        location: '烧烤店',
+        options: [
+            { 
+                id: 39.0,
+                label: '站起来要求对方走开',
+                text: '',
+                to: 40,
+                attributesChange: {
+                    mood: -1
+                }
+            },
+            { 
+                id: 39.1,
+                label: '默不作声',
+                text: '',
+                to: 40,
+                attributesChange: {
+                    mood: -1,
+                    courage: -1
+                }
+            }
+        ]
+    },
+    {
+        id: 40,
+        text: '在朋友的反复拒绝下,X动手一耳光扇向朋友, 我试图走到朋友身边。',
+        time: '24:00',
+        location: '烧烤店',
+        options: [
+            { 
+                id: 40.0,
+                label: '继续',
+                text: '',
+                to: 41,
+                attributesChange: {
+                    mood: -1
+                }
+            }
+        ]
+    },
+    {
+        id: 41,
+        text: 'x揪住我殴打, 男子y冲进来, 举起椅子砸向我, 接着殴打乙; 男子z冲进店中, 殴打朋友甲x“真他妈给脸不要脸, 臭婊子, 以为自己是谁? 还敢耍性子”y”我操真他妈的贱货“',
+        time: '24:00',
+        location: '烧烤店',
+        options: [
+            { 
+                id: 40.0,
+                label: '继续',
+                text: '',
+                to: 42,
+                attributesChange: {
+                    mood: -1
+                }
+            }
+        ]
+    },
+    {
+        id: 42,
+        text: 'x揪住朋友甲殴打, x将甲拖出店门外',
+        time: '24:00',
+        location: '烧烤店',
+        options: [
+            { 
+                id: 42.0,
+                label: '我试图从地上爬起',
+                text: 'y踹我, 我蜷起身体。',
+                to: 43,
+                attributesChange: {
+                    life: -3
+                }
+            },
+            { 
+                id: 42.1,
+                label: '我跑出店外，打电话报警',
+                text: 'x看到我, 揪住我的头发把我抡向地面，我的头磕上台阶。',
+                to: 45,
+                attributesChange: {
+                    life: -3
+                }
+            }
+        ]
+    },
+    {
+        id: 43,
+        text: 'y离开了, 我站了起来, 店主询问我: 你认识那几个打人的人吗? 我回答: 不认识; 我寻找乙; 店里有别的客人在哭, 我跑出店; 我看到x擦了擦手, 他手上都是血。X又开始对我朋友拳打脚踢',
+        time: '24:00',
+        location: '烧烤店',
+        options: [
+            { 
+                id: 43.0,
+                label: '继续',
+                text: '旁人劝架、被x殴打;警笛声响起,x、y、z立刻抽身,在警察到达之前跑了。',
+                to: 44,
+                attributesChange: {
+                    life: -3
+                }
+            }
+        ]
+    },
+    {
+        id: 44,
+        ending: {
+            id: 44.0,
+            label: '游戏结束',
+            text: '结局3: 未被骚扰，未出血；受伤'
+        }
+    },
+    {
+        id: 45,
+        text: '旁人劝架、被x殴打;警笛声响起, x、y、z立刻抽身, 在警察到达之前跑了。',
+        time: '24:00',
+        location: '烧烤店',
+        options: [
+            { 
+                id: 45.0,
+                label: '继续',
+                text: '',
+                to: 46,
+                attributesChange: {}
+            }
+        ]
+    },
+    {
+        id: 46,
+        ending: {
+            id: 46.0,
+            label: '游戏结束',
+            text: '结局2: 未被骚扰，未出血；头部受击打；受伤'
+        }
     }
 ]

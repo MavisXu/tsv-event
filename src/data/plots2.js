@@ -515,7 +515,7 @@ export const plots2 = [
                 id: 18.1,
                 label: '拒绝',
                 text: '',
-                to: 20,
+                to: 100,
                 attributesChange: {}
             }
         ]
@@ -536,14 +536,6 @@ export const plots2 = [
                 }
             },
         ]
-    },
-    {
-        id: 20,
-        ending: {
-                id: 20.0,
-                label: '游戏结束',
-                text: '深夜收到朋友短信：我们被人打了，打人的跑了。'
-            }
     },
     {
         id: 21,
@@ -832,21 +824,13 @@ export const plots2 = [
                 id: 35.0,
                 label: '继续',
                 text: '旁人劝架、被x殴打;警笛声响起,x、y、z立刻抽身,在警察到达之前跑了。',
-                to: 36,
+                to: 101,
                 attributesChange: {
                     life: -1,
                     mood: -1
                 }
             }
         ]
-    },
-    {
-        id: 36,
-        ending: {
-            id: 36.0,
-            label: '游戏结束',
-            text: '结局1: 被骚扰; 大量出血；面部头部受伤；'
-        }
     },
     {
         id: 37,
@@ -975,20 +959,12 @@ export const plots2 = [
                 id: 43.0,
                 label: '继续',
                 text: '旁人劝架、被x殴打;警笛声响起,x、y、z立刻抽身,在警察到达之前跑了。',
-                to: 44,
+                to: 102,
                 attributesChange: {
                     life: -3
                 }
             }
         ]
-    },
-    {
-        id: 44,
-        ending: {
-            id: 44.0,
-            label: '游戏结束',
-            text: '结局3: 未被骚扰，未出血；受伤'
-        }
     },
     {
         id: 45,
@@ -1000,15 +976,39 @@ export const plots2 = [
                 id: 45.0,
                 label: '继续',
                 text: '',
-                to: 46,
+                to: 103,
                 attributesChange: {}
             }
         ]
     },
     {
-        id: 46,
+        id: 100,
         ending: {
-            id: 46.0,
+                id: 100.0,
+                label: '游戏结束',
+                text: '深夜收到朋友短信：我们被人打了，打人的跑了。'
+            }
+    },
+    {
+        id: 101,
+        ending: {
+            id: 101.0,
+            label: '游戏结束',
+            text: '结局1: 被骚扰; 大量出血；面部头部受伤；'
+        }
+    },
+    {
+        id: 102,
+        ending: {
+            id: 102.0,
+            label: '游戏结束',
+            text: '结局3: 未被骚扰，未出血；受伤'
+        }
+    },
+    {
+        id: 103,
+        ending: {
+            id: 103.0,
             label: '游戏结束',
             text: '结局2: 未被骚扰，未出血；头部受击打；受伤'
         }

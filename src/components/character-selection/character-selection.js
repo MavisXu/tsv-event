@@ -1,8 +1,12 @@
 import { characters } from '../../data/characters.js';
+import { useViewport } from '../../hooks/use-viewport.js';
 import { useNavigate } from 'react-router-dom';
 import './character-selection.css';
 
 export default function CharacterSelection() {
+    const { width } = useViewport();
+    const breakpoint = 620;
+
     let navigate = useNavigate();
     const routeChange = (character) => {
       let path = '/game';
@@ -11,13 +15,13 @@ export default function CharacterSelection() {
     };
 
     return (
-      <div className='selection-body'>
+      <div className={ width < breakpoint ? 'selection-body-mobile' : 'selection-body' }>
         <h1>请选择游戏角色</h1>
           {characters.map(character => {
             return (
-              <div key={character.id} className='character'>
+              <div key={character.id} className={ width < breakpoint ? 'character-mobile' : 'character' }>
                 <img className='photo' src={character.profile} onClick={() => {routeChange(character)}}></img>
-                <div className='details'>
+                <div className={ width < breakpoint ? 'details-mobile' : 'details' }>
                   <h3>{character.name}</h3>
                   <div className='detail'>
                     <h4>性别： {character.gender}</h4>

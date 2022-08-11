@@ -1,5 +1,10 @@
-.selection-body {
+.selection-body-mobile {
     margin: 2rem 4rem;
+    text-align: center;
+}
+
+.selection-body {
+    margin: 0 4rem;
     text-align: center;
 }
 
@@ -8,21 +13,21 @@
     margin: 2rem;
 }
 
-/* .character {
-    display: flex;
-    justify-content: space-around;
-} */
-
 .character {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.character-mobile {
     display: flex;
     flex-direction: column;
 }
 
-/* .details {
-    margin: 2rem 0 0 0;
-} */
-
 .details {
+    margin: 2rem 0 0 0;
+}
+
+.details-mobile {
     margin: 0;
 }
 

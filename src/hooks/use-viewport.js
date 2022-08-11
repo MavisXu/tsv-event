@@ -1,3 +1,5 @@
+import React from 'react';
+
 const useViewport = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
 
@@ -9,3 +11,5 @@ const useViewport = () => {
 
     return { width };
 }
+
+export { useViewport };

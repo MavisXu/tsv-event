@@ -24,7 +24,7 @@ export const plots1 = [
                 label: '特别烦躁',
                 text: '把电话摁了。\
                       又来了一个电话，呼叫人“大哥”，接起电话。',
-                to: 2,
+                to: 1,
                 attributesChange: {}
             }
         ]

@@ -8,7 +8,7 @@ import './game.css'
 export default function Game() {
     const { characterId, attributes } = useLocation().state;
     const [ plotId, setPlotId ] = useState(0);
-    const [ plots, setPlots ] = useState(choosePlots(characterId));
+    const [ plots ] = useState(choosePlots(characterId));
     const [ text, setText] = useState('');
 
 

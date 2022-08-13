@@ -1,7 +1,7 @@
 import './choice.css'
 
 export default function Choice(props) {
-    function clickHandler(event){
+    function clickHandler(){
         props.changePlot(props.details.text, props.details.to, props.details.attributesChange);
     }
 

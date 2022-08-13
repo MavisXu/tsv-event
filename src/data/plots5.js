@@ -10,7 +10,7 @@ export const plots5 = [
                 label: '老婆很能干',
                 text: '你觉得你老婆很能干，你看那签子串得飞快。她从姑娘时候就手巧。',
                 to: 1,
-                attributeChange: {
+                attributesChange: {
                     mood: 1
                 }
             },
@@ -19,7 +19,7 @@ export const plots5 = [
                 label: '自己很能干',
                 text: '你看着这家店，从内饰、装潢到桌椅的摆放，无一不是你紧紧盯着装修工人们完成的。事实证明，尽管疫情导致了一些亏损，但只要给人们外出消费的机会，你就能再度盈利。',
                 to: 1,
-                attributeChange: {
+                attributesChange: {
                     mood: 1,
                     courage: 1
                 }
@@ -268,7 +268,7 @@ export const plots5 = [
                 label: '继续',
                 text: '',
                 to: 13,
-                attributeChange: {
+                attributesChange: {
                     mood: -1
                 }
             }
@@ -353,7 +353,7 @@ export const plots5 = [
                 label: '继续',
                 text: '',
                 to: 18,
-                attributeChange: {
+                attributesChange: {
                     mood: -1
                 }
             }
@@ -394,7 +394,7 @@ export const plots5 = [
                 label: '继续',
                 text: '',
                 to: 21,
-                attributeChange: {
+                attributesChange: {
                     money: -1,
                     courage: 1
                 }
@@ -414,7 +414,7 @@ export const plots5 = [
                 label: '继续',
                 text: '',
                 to: 21,
-                attributeChange: {
+                attributesChange: {
                     money: -1
                 }
             }
@@ -428,9 +428,16 @@ export const plots5 = [
         options: [
             { 
                 id: 21.0,
-                label: 'if(勇气<=8)劝说男顾客，“哎大哥，没事没事，妹子害羞，都这样啊！',
+                label: '劝说男顾客，“哎大哥，没事没事，妹子害羞，都这样啊！',
                 text: '',
-                to: 22
+                to: 22,
+                showConditions: [
+                    {
+                        operation: '>=',
+                        attributeName: 'courage',
+                        attributeValue: 8
+                    }
+                ]
             },
             { 
                 id: 21.1,
@@ -440,9 +447,16 @@ export const plots5 = [
             },
             { 
                 id: 21.2,
-                label: 'if(勇气>=8)奉承男顾客，“哎大哥，我开店这么多年，第一次见你和你兄弟这么能喝又懂吃的人哇！”',
+                label: '奉承男顾客，“哎大哥，我开店这么多年，第一次见你和你兄弟这么能喝又懂吃的人哇！”',
                 text: '',
-                to: 25
+                to: 25,
+                showConditions: [
+                    {
+                        operation: '>=',
+                        attributeName: 'courage',
+                        attributeValue: 8
+                    }
+                ]
             }
         ]
     },
@@ -457,7 +471,7 @@ export const plots5 = [
                 label: '继续',
                 text: '',
                 to: 23,
-                attributeChange: {
+                attributesChange: {
                     life: -1,
                     appearance: -1,
                     courage: -1
@@ -491,7 +505,7 @@ export const plots5 = [
                 label: '继续',
                 text: '',
                 to: 100,
-                attributeChange: {
+                attributesChange: {
                     money: -1,
                     courage: -1,
                     mood: -1,
@@ -511,7 +525,7 @@ export const plots5 = [
                 label: '继续',
                 text: '',
                 to: 26,
-                attributeChange: {
+                attributesChange: {
                     moral: 1
                 }
             }
@@ -545,7 +559,7 @@ export const plots5 = [
                 label: '继续',
                 text: '',
                 to: 28,
-                attributeChange: {
+                attributesChange: {
                     life: -1
                 }
             }
@@ -562,7 +576,7 @@ export const plots5 = [
                 label: 'if(勇气>=6)询问女顾客同桌顾客：“你们认识那个打人的吗？”',
                 text: '她回道：“不认识”',
                 to: 29,
-                attributeChange: {
+                attributesChange: {
                     mood: -1
                 }
             },
@@ -620,7 +634,7 @@ export const plots5 = [
                 label: '继续',
                 text: '',
                 to: 33,
-                attributeChange: {
+                attributesChange: {
                     life: -1,
                     appearance: -1,
                     mood: -1
@@ -639,7 +653,7 @@ export const plots5 = [
                 label: '继续',
                 text: '',
                 to: 33,
-                attributeChange: {
+                attributesChange: {
                     life: -1,
                     appearance: -1,
                     mood: -1
@@ -698,7 +712,7 @@ export const plots5 = [
                 label: '继续',
                 text: '',
                 to: 103,
-                attributeChange: {
+                attributesChange: {
                     money: -2
                 }
             }
@@ -788,7 +802,7 @@ export const plots5 = [
                 label: '继续',
                 text: '',
                 to: 42,
-                attributeChange: {
+                attributesChange: {
                     life: -1,
                     courage: -1
                 }

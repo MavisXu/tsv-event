@@ -12,7 +12,7 @@ export default function Ending(props) {
     console.log(props)
     return (
         <div>
-            <div><h3>{props.ending}</h3></div>
+            <div><h3>{props?.ending}</h3></div>
             <button className='button' onClick={resetGame}>重玩一遍</button>
         </div>
     )

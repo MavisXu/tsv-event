@@ -595,7 +595,7 @@ export const plots5 = [
         location: '店里大厅',
         options: [
             { 
-                id: 28.0,
+                id: 29.0,
                 label: '继续',
                 text: '',
                 to: 30
@@ -866,7 +866,7 @@ export const plots5 = [
         location: '店里大厅',
         options: [
             { 
-                id: 44.0,
+                id: 45.0,
                 label: '继续',
                 text: '',
                 to: 46

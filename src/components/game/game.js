@@ -28,9 +28,11 @@ export default function Game() {
     function changePlot(reponseText, to, attributesChange) {
         setText(reponseText);
         setPlotId(to);
-        Object.entries(attributesChange).forEach(([key, value]) => {
-            attributes[key] += value;
-        });
+        if (attributesChange) {
+            Object.entries(attributesChange).forEach(([key, value]) => {
+                attributes[key] += value;
+            });
+        }
     }
 
     function choosePlots(characterId) {
@@ -48,9 +50,28 @@ export default function Game() {
         }
     }
 
+    function validateShowConditions(option) {
+        if (!option.showConditions) return true;
+
+        const ops = new Map([
+            ['>=', (num1, num2) => num1 >= num2],
+            ['>', (num1, num2) => num1 > num2],
+            ['<=', (num1, num2) => num1 <= num2],
+            ['<', (num1, num2) => num1 < num2],
+            ['==', (num1, num2) => num1 === num2]
+        ]);
+        for (let i in option.showConditions) {
+            let {operation, attributeName, attributeValue} = option.showConditions[i];
+            if (ops.get(operation)(attributes[attributeName], attributeValue)) continue;
+            return false;
+        }
+        return true;
+    }
+
     function showChoices(data) {
         if (data && data.options) {
-            let choices = data.options.map(option => {
+            let filteredData = data.options.filter(validateShowConditions);
+            let choices = filteredData.map(option => {
                 return (
                     <Choice
                         key={option.id}

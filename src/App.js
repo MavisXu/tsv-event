@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Entrance from './components/entrance/entrance';
 
 function App() {

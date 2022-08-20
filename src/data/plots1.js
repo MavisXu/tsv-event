@@ -234,7 +234,14 @@ export const plots1 = [
                 label: '等待绿灯', 
                 text: '不闯。之前出了点事情分扣完了，要不是跟大哥一块走了点门路还得重考科目一，算了，麻烦。等一会儿又不会怎么样。',
                 to: 8,
-                attributesChange: {}
+                attributesChange: {},
+                showConditions: [
+                    {
+                        operation: '>=',
+                        attributeName: 'moral',
+                        attributeValue: 6
+                    }
+                ]
             }
         ]
     },
@@ -423,7 +430,7 @@ export const plots1 = [
             },
             { 
                 id: 13.2,
-                label: '异域风情', 
+                label: '可以来几串跟那个女人吃得一样的烤串。', 
                 text: '你走向收银台加菜。',
                 to: 14,
                 attributesChange: {}
@@ -462,9 +469,16 @@ export const plots1 = [
             { 
                 id: 14.3,
                 label: '什么也不做', 
-                text: '你回到店外自己那一桌。',
-                to: 100,
-                attributesChange: {}
+                text: '',
+                to: 103,
+                attributesChange: {},
+                showConditions: [
+                    {
+                        operation: '>=',
+                        attributeName: 'moral',
+                        attributeValue: 8
+                    }
+                ]
             }
         ]
     },
@@ -504,6 +518,20 @@ export const plots1 = [
                     violence: 1,
                     life: -1
                 }
+            },
+            { 
+                id: 15.3,
+                label: '索然无味', 
+                text: '',
+                to: 100,
+                attributesChange: {},
+                showConditions: [
+                    {
+                        operation: '>=',
+                        attributeName: 'violence',
+                        attributeValue: 2
+                    }
+                ]
             }
         ]
     },
@@ -606,7 +634,14 @@ export const plots1 = [
                 label: '恼火、愤怒，但……', 
                 text: '你忽然觉得，似乎没有必要再打下去。已经不早了，你完全可以和兄弟们再喝点然后各回各家。你回到桌前。',
                 to: 101,
-                attributesChange: {}
+                attributesChange: {},
+                showConditions: [
+                    {
+                        operation: '>=',
+                        attributeName: 'moral',
+                        attributeValue: 9
+                    }
+                ]
             }
         ]
     },
@@ -714,6 +749,16 @@ export const plots1 = [
                 label: '游戏结束',
                 text: '你们看到网络上传播的监控视频后，发现这件事发酵得不可收拾。在一位朋友的指点下，你和你的兄弟们连夜离开了a市，逃往b市。临走前，你妻子默默地流着眼泪，问道：“你这次又要走多久？”你嫌她碍事，当着儿子的面把她推倒在地。\
                         两天后，你们被跨省追捕归案。警察发现你刑拘在逃'
+            }
+
+    },
+    {
+        id: 103,
+        ending: {
+                id: 103.0,
+                label: '游戏结束',
+                text: '你回到店外自己那一桌。\
+                        （未性骚扰女性，吃完烧烤回家了）'
             }
 
     }

@@ -11,14 +11,14 @@ export interface Character {
 }
 
 export interface Attributes {
-    moral: number,
-    violence: number,
-    strength: number,
-    mood: number,
-    money: number,
-    courage: number,
-    life: number,
-    appearance: number
+    moral: number | null,
+    violence: number | null,
+    strength: number | null,
+    mood: number | null,
+    money: number | null,
+    courage: number | null,
+    life: number | null,
+    appearance: number | null
 }
 
 export interface Plot {
@@ -27,7 +27,8 @@ export interface Plot {
     time: string | null,
     location: string | null,
     options: [Option] | null,
-    ending: GameEnding | null;
+    ending: GameEnding | null,
+    showConditions: [Condition] | null;
 }
 
 export interface Option {
@@ -42,4 +43,10 @@ export interface GameEnding {
     id: number,
     label: string,
     text: string
+}
+
+export interface Condition {
+    operation: string,
+    attributeName: string,
+    attributeValue: number
 }

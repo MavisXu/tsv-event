@@ -58,7 +58,9 @@ export const characters = [
             money: 10,
             courage: 6,
             life: 10,
-            appearance: 6
+            appearance: 6,
+            random: Math.random() * 100,
+            selected: new Map()
         }
     },
     {

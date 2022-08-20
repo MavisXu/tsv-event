@@ -1,4 +1,5 @@
 import { characters } from '../../data/characters.js';
+import { Character } from '../../common/types.ts'
 import { useViewport } from '../../hooks/use-viewport.js';
 import { useNavigate } from 'react-router-dom';
 import './character-selection.css';
@@ -8,7 +9,7 @@ export default function CharacterSelection() {
     const breakpoint = 620;
 
     let navigate = useNavigate();
-    const routeChange = (character) => {
+    const routeChange = (character : Character) => {
       let path = '/game';
       let state = {state: {characterId: character.id, attributes: character.attributes}}
       navigate(path, state);

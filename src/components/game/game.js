@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { plots1, plots2, plots3, plots4, plots5 } from '../../data/';
+import { Plot } from '../../common/types.ts'
 import Choice from '../choice/choice';
 import Ending from '../ending/ending';
 import './game.css'
@@ -68,7 +69,7 @@ export default function Game() {
         return true;
     }
 
-    function showChoices(data) {
+    function showChoices(data : Plot) {
         if (data && data.options) {
             let filteredData = data.options.filter(validateShowConditions);
             let choices = filteredData.map(option => {
@@ -96,7 +97,7 @@ export default function Game() {
             <div>
                 <h3>{text}</h3>
             </div>
-            <div>
+            <div className='choices'>
                 {showChoices(getPlots(plotId))}
             </div>
         </div>

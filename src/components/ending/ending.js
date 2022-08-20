@@ -1,7 +1,8 @@
 import { useNavigate } from 'react-router-dom'
+import { GameEnding } from '../../common/types.ts'
 import './ending.css';
 
-export default function Ending(props) {
+export default function Ending(props : GameEnding) {
     let navigate = useNavigate();
 
     function resetGame() {

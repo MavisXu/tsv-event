@@ -926,7 +926,14 @@ export const plots4 = [
                 to: 35,
                 attributesChange: {
                     courage: 1
-                }
+                },
+                showConditions: [
+                    {
+                        operation: '>=',
+                        attributeName: 'courage',
+                        attributeValue: 8
+                    }
+                ]
             },
             { 
                 id: 34.1,
@@ -935,7 +942,14 @@ export const plots4 = [
                 to: 36,
                 attributesChange: {
                     courage: 1
-                }
+                },
+                showConditions: [
+                    {
+                        operation: '>=',
+                        attributeName: 'courage',
+                        attributeValue: 8
+                    }
+                ]
             },
             { 
                 id: 34.2,

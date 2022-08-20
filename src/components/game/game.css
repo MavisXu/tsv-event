@@ -1,3 +1,9 @@
 .text {
     margin: 1rem;
 }
+
+.choices {
+    position: fixed;
+    bottom: 4%;
+    left: 4%;
+}

@@ -32,7 +32,7 @@ export default function Game() {
         if (attributesChange) {
             Object.entries(attributesChange).forEach(([key, value]) => {
                 if (key === 'selected') {
-                    attributes[key].set(value, true);
+                    attributes[key].push(value);
                 } else {
                     attributes[key] += value;
                 }
@@ -64,8 +64,8 @@ export default function Game() {
             ['<=', (num1, num2) => num1 <= num2],
             ['<', (num1, num2) => num1 < num2],
             ['==', (num1, num2) => num1 === num2],
-            ['has', (map, key) => map.has(key)],
-            ['no', (map, key) => !map.has(key)]
+            ['has', (arr1, arr2) => arr1.some(r => arr2.indexOf(r) >= 0)],
+            ['no', (arr1, arr2) => arr1.all(r => arr2.indexOf(r) < 0)]
         ]);
         for (let i in option.showConditions) {
             let {operation, attributeName, attributeValue} = option.showConditions[i];
@@ -88,12 +88,9 @@ export default function Game() {
                 )
             })
             return choices;
-        } else if (data && data.ending) {
+        } else if (data) {
             return (
-                <Ending
-                    key={data.ending.id}
-                    ending={data.ending.text}
-                />
+                <Ending/>
             )
         }
     }

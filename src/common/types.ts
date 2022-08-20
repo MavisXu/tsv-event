@@ -18,7 +18,9 @@ export interface Attributes {
     money: number | null,
     courage: number | null,
     life: number | null,
-    appearance: number | null
+    appearance: number | null,
+    random: number | null,
+    selected: Map<number, boolean> | null
 }
 
 export interface Plot {

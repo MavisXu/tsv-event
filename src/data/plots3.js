@@ -127,7 +127,7 @@ export const plots3 = [
                 id: 7.0,
                 label: '继续',
                 text: '',
-                to: 9 // TODO
+                to: 13
             }
         ]
     },
@@ -567,7 +567,10 @@ export const plots3 = [
                 id: 32.2,
                 label: '拒绝',
                 text: '',
-                to: 37
+                to: 37,
+                attributesChange: {
+                    selected: 32.2
+                }
             }
         ]
     },
@@ -673,7 +676,7 @@ export const plots3 = [
                 id: 39.1,
                 label: '赶快去拿快递',
                 text: '',
-                to: 42 // todo
+                to: 44
             }
         ]
     },
@@ -799,7 +802,31 @@ export const plots3 = [
                 id: 46.0,
                 label: '继续',
                 text: '',
-                to: 46, // todo
+                to: 105,
+                showConditions: [
+                    {
+                        operation: 'has',
+                        attributeName: 'selected',
+                        attributeValue: 32.2
+                    }
+                ],
+                attributesChange: {
+                    mood: -1,
+                    violence: 1
+                }
+            },
+            { 
+                id: 46.0,
+                label: '继续',
+                text: '',
+                to: 48,
+                showConditions: [
+                    {
+                        operation: 'no',
+                        attributeName: 'selected',
+                        attributeValue: 32.2
+                    }
+                ],
                 attributesChange: {
                     mood: -1,
                     violence: 1
@@ -1144,13 +1171,27 @@ export const plots3 = [
                 id: 66.0,
                 label: '继续',
                 text: '',
-                to: 67 // todo - random choice
+                to: 67,
+                showConditions: [
+                    {
+                        operation: '>',
+                        attributeName: 'random',
+                        attributeValue: 50
+                    }
+                ]
             },
             { 
                 id: 66.1,
                 label: '继续',
                 text: '',
-                to: 68 // todo - random choice
+                to: 68,
+                showConditions: [
+                    {
+                        operation: '<=',
+                        attributeName: 'random',
+                        attributeValue: 50
+                    }
+                ]
             }
         ]
     },
@@ -1482,6 +1523,14 @@ export const plots3 = [
                 id: 104.0,
                 label: '游戏结束',
                 text: '你继续对乙拳打脚踢。警笛的声音出现，你和大哥兄弟们匆匆离开，并跟着大哥火速出省，最终两天后被捉拿归案）'
+            }
+    },
+    {
+        id: 105,
+        ending: {
+                id: 105.0,
+                label: '游戏结束',
+                text: '发现快递里是死老鼠后, 你连夜回了老家躲债'
             }
     }
 ]

@@ -31,7 +31,11 @@ export default function Game() {
         setPlotId(to);
         if (attributesChange) {
             Object.entries(attributesChange).forEach(([key, value]) => {
-                attributes[key] += value;
+                if (key === 'selected') {
+                    attributes[key].set(value, true);
+                } else {
+                    attributes[key] += value;
+                }
             });
         }
     }
@@ -59,7 +63,9 @@ export default function Game() {
             ['>', (num1, num2) => num1 > num2],
             ['<=', (num1, num2) => num1 <= num2],
             ['<', (num1, num2) => num1 < num2],
-            ['==', (num1, num2) => num1 === num2]
+            ['==', (num1, num2) => num1 === num2],
+            ['has', (map, key) => map.has(key)],
+            ['no', (map, key) => !map.has(key)]
         ]);
         for (let i in option.showConditions) {
             let {operation, attributeName, attributeValue} = option.showConditions[i];

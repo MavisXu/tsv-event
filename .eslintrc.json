@@ -20,15 +20,14 @@
         "react",
         "@typescript-eslint"
     ],
-    "rules": {
-        "react/prop-types": "off"
-    },
+    "rules": {},
     "settings": {
         "react": {
           "version": "detect"
         },
         "editor.codeActionsOnSave": {
             "source.fixAll": true
-        }
+        },
+        "eslint.validate": ["javascript"]
     }
 }

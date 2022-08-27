@@ -507,21 +507,27 @@ export const plots4 = [
                 label: '不要',
                 text: '按照你的经验，两个人吃饭，三菜一汤是一定足够的，但是对方已经点了4道菜了，虽然没有汤，但也够了。你：“我觉得够了，先就点这些吧。”',
                 to: 19,
-                attributesChange: {}
+                attributesChange: {
+                    selected: 18.0
+                }
             },
             { 
                 id: 18.1,
                 label: '芝麻酱油麦菜-48元', 
                 text: '对方点的都是肉菜，不符合你的饮食习惯，你决定再要一份时蔬：“再加一份油麦菜。”',
                 to: 19,
-                attributesChange: {}
+                attributesChange: {
+                    selected: 18.1
+                }
             },
             { 
                 id: 18.2,
                 label: '松茸鱼面筋-128元', 
                 text: '对方点的菜，感觉不合你的胃口，你决定再要一份作为今晚你的主菜：“再加一份松茸鱼面筋。”',
                 to: 19,
-                attributesChange: {}
+                attributesChange: {
+                    selected: 18.2
+                }
             },
             { 
                 id: 18.3,
@@ -594,7 +600,14 @@ export const plots4 = [
                 text: '你摸不着头脑。 \
                         对方似乎没料到你会这么说，打了个哈哈，“是吗，我没注意。”',
                 to: 22,
-                attributesChange: {}
+                attributesChange: {},
+                showConditions: [
+                    {
+                        operation: 'has',
+                        attributeName: 'selected',
+                        attributeValue: [18.0, 18.1, 18.2]
+                    }
+                ],
             },
             { 
                 id: 21.1,
@@ -990,11 +1003,34 @@ export const plots4 = [
             { 
                 id: 36.0,
                 label: '继续见义勇为',
-                text: '',
-                to: 38,
+                text: '又有几桌客人响应你，他们说着：“干嘛啊！不要欺负小姑娘啊！”',
+                to: 40,
                 attributesChange: {
                     life: -1
-                }
+                },
+                showConditions: [
+                    {
+                        operation: '>',
+                        attributeName: 'random',
+                        attributeValue: 50
+                    }
+                ]
+            },
+            { 
+                id: 36.1,
+                label: '继续见义勇为',
+                text: '没有人响应你，大家都只是默默地看着，d一脸凶相地走了过来，骂道：“我看你这个婊子是欠肏！”他揪住你的头发，你惊吓之下拿起桌上的盘子掀到他身上，他怒不可遏，开始殴打你。你感觉到好友在保护你，但d的拳头和脚不时就落在你身上……',
+                to: 102,
+                attributesChange: {
+                    life: -1
+                },
+                showConditions: [
+                    {
+                        operation: '<=',
+                        attributeName: 'random',
+                        attributeValue: 50
+                    }
+                ]
             }
         ]
     },
@@ -1072,48 +1108,40 @@ export const plots4 = [
         ]
     },
     {
-        id: 100,
-        ending: {
-                id: 100.0,
-                label: '游戏结束',
-                text: '自己不受伤；伤者及其朋友受伤；性骚扰人受伤（正当防卫）'
+        id: 40,
+        text: 'd破口大骂：“一群傻b！” \
+                骂完却走了出去。\
+                过了一会儿，你还是担心，问了老板后门在哪儿，叫了两辆车跟那桌妹子从后门溜了',
+        time: '1:50',
+        location: '烧烤店',
+        options: [
+            { 
+                id: 40.0,
+                label: '继续',
+                text: '',
+                to: 101,
+                attributesChange: {}
             }
-
+        ]
+    },
+    {
+        id: 100,
+        text: '自己不受伤；伤者及其朋友受伤；性骚扰人受伤（正当防卫）'
     },
     {
         id: 101,
-        ending: {
-                id: 101.0,
-                label: '游戏结束',
-                text: '全员幸存, 成就幸运SSS'
-            }
-
+        text: '全员幸存, 成就幸运SSS'
     },
     {
         id: 102,
-        ending: {
-                id: 102.0,
-                label: '游戏结束',
-                text: '吸引火力变成受害者。你有了深深的心理阴影，决定以后再也不多嘴帮人。不再相信人们会互助'
-            }
-
+        text: '吸引火力变成受害者。你有了深深的心理阴影，决定以后再也不多嘴帮人。不再相信人们会互助'
     },
     {
         id: 103,
-        ending: {
-                id: 103.0,
-                label: '游戏结束',
-                text: '自己不受伤，目击陌生女性及其朋友受伤'
-            }
-
+        text: '自己不受伤，目击陌生女性及其朋友受伤'
     },
     {
         id: 104,
-        ending: {
-                id: 104.0,
-                label: '游戏结束',
-                text: '受轻伤、惊吓, 同陌生女性、朋友一块被打、减轻伤者原本的伤情, 被伤者感谢'
-            }
-
+        text: '受轻伤、惊吓, 同陌生女性、朋友一块被打、减轻伤者原本的伤情, 被伤者感谢'
     }
 ]

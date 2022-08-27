@@ -20,7 +20,7 @@ export interface Attributes {
     life: number | null,
     appearance: number | null,
     random: number | null,
-    selected: Map<number, boolean> | null
+    selected: [] | null
 }
 
 export interface Plot {
@@ -29,7 +29,6 @@ export interface Plot {
     time: string | null,
     location: string | null,
     options: [Option] | null,
-    ending: GameEnding | null,
     showConditions: [Condition] | null;
 }
 
@@ -39,12 +38,6 @@ export interface Option {
     text: string | null,
     to: number,
     attributesChange: Attributes
-}
-
-export interface GameEnding {
-    id: number,
-    label: string,
-    text: string
 }
 
 export interface Condition {

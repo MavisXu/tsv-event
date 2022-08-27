@@ -1,8 +1,7 @@
 import { useNavigate } from 'react-router-dom'
-import { GameEnding } from '../../common/types.ts'
 import './ending.css';
 
-export default function Ending(props : GameEnding) {
+export default function Ending() {
     let navigate = useNavigate();
 
     function resetGame() {
@@ -10,10 +9,8 @@ export default function Ending(props : GameEnding) {
         navigate(path);     
     }
     
-    console.log(props)
     return (
         <div>
-            <div><h3>{props.ending}</h3></div>
             <button className='button' onClick={resetGame}>重玩一遍</button>
         </div>
     )

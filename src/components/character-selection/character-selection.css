@@ -1,5 +1,4 @@
 .selection-body-mobile {
-    margin: 2rem 4rem;
     text-align: center;
 }
 
@@ -9,9 +8,16 @@
 }
 
 .photo {
-    height: 200px;
-    width: 200px;
+    height: 10rem;
+    width: 10rem;
     margin: 2rem;
+}
+
+.photo-mobile {
+    height: 10rem;
+    width: 10rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
 }
 
 .character {
@@ -21,7 +27,9 @@
 
 .character-mobile {
     display: flex;
-    flex-direction: column;
+    background-color: darkgray;
+    margin: 1rem;
+    border-radius: 1rem;
 }
 
 .details {
@@ -29,7 +37,7 @@
 }
 
 .details-mobile {
-    margin: 0;
+    margin: 0 1rem;
 }
 
 .detail {

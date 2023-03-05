@@ -21,8 +21,8 @@ export default function CharacterSelection() {
           {characters.map(character => {
             return (
               <div key={character.id} className={ width < breakpoint ? 'character-mobile' : 'character' }>
-                <img className='photo' src={character.profile} onClick={() => {routeChange(character)}}></img>
-                <div className={ width < breakpoint ? 'details-mobile' : 'details' }>
+                <img className={ width < breakpoint ? 'photo-mobile' : 'photo' } src={character.profile} onClick={() => {routeChange(character)}}></img>
+                <div className={ width < breakpoint ? 'details-mobile' : 'details' } onClick={() => {routeChange(character)}}>
                   <h3>{character.name}</h3>
                   <div className='detail'>
                     <h4>性别： {character.gender}</h4>

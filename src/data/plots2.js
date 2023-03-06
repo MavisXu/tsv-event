@@ -1,9 +1,12 @@
+import { Ch2001, Ch2002 } from '../assets/';
+
 export const plots2 = [
     {
         id: 0,
         text: '又是新的一天！元气满满，起床，今天穿什么好呢？',
         time: '8:00',
         location: '家中',
+        bgPhoto: Ch2001,
         options: [
             { 
                 id: 0.0,
@@ -39,6 +42,7 @@ export const plots2 = [
         text: '早高峰很挤，进园区扫场所码人很多，拍照发朋友圈，感慨卡点打卡失败。家长评论：再起早点就好了嘛，女孩子要勤快一点呀，不要这么懒',
         time: '9:00',
         location: '公司',
+        bgPhoto: Ch2002,
         options: [
             { 
                 id: 1.0,

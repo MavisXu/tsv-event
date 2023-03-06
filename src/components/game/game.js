@@ -96,11 +96,15 @@ export default function Game() {
     }
 
     return (
-        <div className='text'>
-            <div>
-                <h3>{text}</h3>
+        <div>
+            <div className='plotBox'>
+                <img src={getPlots(plotId).bgPhoto} className='bgPhoto'></img>
+                
+                <div className='plotText'>
+                    <h3>{text}</h3>
+                </div>
             </div>
-            <div className='choices'>
+            <div className='plotBox'>
                 {showChoices(getPlots(plotId))}
             </div>
         </div>

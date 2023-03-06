@@ -1,5 +1,19 @@
-.text {
+.plotBox {
     margin: 1rem;
+    padding-top: 1rem;
+    border-radius: 1rem;
+    background-color: plum;
+}
+
+.bgPhoto {
+    height: 90%;
+    width: 90%;
+    margin: 0 1rem;
+    border-radius: 1rem;
+}
+
+.plotText {
+    padding: 0 1rem 0.5rem;
 }
 
 .choices {

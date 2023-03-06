@@ -1,10 +1,12 @@
 .choice {
-    margin-bottom: 1rem;
+    padding: 0 0 1rem 1rem;
 }
 
-.button {
-    background-color: white;
+.choiceButton {
+    background-color: lightgray;
     color: black;
     font-size: 1.17rem;
-    border: 0.1rem solid #e7e7e7;
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+    width: 95%;
 }

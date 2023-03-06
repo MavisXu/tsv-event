@@ -9,7 +9,7 @@ export default function Choice(props : Option) {
 
     return (
         <div className='choice'>
-            <button className='button' onClick={clickHandler}>
+            <button className='choiceButton' onClick={clickHandler}>
                 {props.details.label}
             </button>
         </div>
